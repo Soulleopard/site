@@ -1,6 +1,6 @@
 ---
-title: "Terms & Conditions"
-meta_title: "Terms & Conditions"
+title: Terms & Conditions
+meta_title: Terms & Conditions
 draft: false
 ---
 
@@ -38,7 +38,7 @@ SOFTWARE.
 
 ### Content
 
-It is not permitted to mirror or re-publish the content of this website. That includes, for example, the words and images displayed on it. Write your own blog.
+It is not permitted to mirror or re-publish the content of this website. That includes, for example, the words and images displayed on it.
 
 ## Terms
 

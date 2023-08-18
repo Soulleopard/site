@@ -7,8 +7,11 @@ Tristan Brunfelts's personal website.
 ## Development Instructions
 
 Clone: `git clone https://github.com/Soulleopard/site.git`
+
 Use Node 18: `nvm install 18`
+
 Install Node Modules: `npm install`
+
 Build: `npm run dev`
 
 ## License
