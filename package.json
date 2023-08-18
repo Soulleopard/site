@@ -1,8 +1,8 @@
 {
-  "name": "pages",
+  "name": "Tristan Ross",
   "version": "1.4.1",
-  "description": "Template.",
-  "author": "Jane Doe",
+  "description": "Tristan Brunfelt's website",
+  "author": "Tristan Brunfelt",
   "license": "MIT",
   "packageManager": "yarn@1.22.19",
   "scripts": {
