@@ -1,7 +1,7 @@
 {
   "site": {
-    "title": "Pages",
-    "base_url": "https://reednel.com",
+    "title": "Tristan Ross",
+    "base_url": "https://tristanross.net",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
