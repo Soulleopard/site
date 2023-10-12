@@ -10,7 +10,6 @@ import { Image } from "@astrojs/image/components";
 import {
   FaRegCalendarAlt,
   FaRegFolder,
-  FaRegUserCircle,
 } from "react-icons/fa/index.js";
 
 const { blog_folder } = config.settings;
@@ -18,7 +17,7 @@ const posts = await getSinglePage(blog_folder);
 const { post } = Astro.props;
 const similarPosts = similerItems(post, posts, post.slug);
 const { Content } = await post.render();
-const { title, description, author, categories, image, date, tags } = post.data;
+const { title, description, categories, image, date, tags } = post.data;
 ---
 
 <section class="section pt-7">
@@ -41,10 +40,6 @@ const { title, description, author, categories, image, date, tags } = post.data;
         }
         <h1 set:html={markdownify(title)} class="mb-4" />
         <ul class="mb-4">
-          <li class="mr-4 inline-block">
-            <FaRegUserCircle className={"mr-2 -mt-1 inline-block"} />
-            {humanize(author)}
-          </li>
           <li class="mr-4 inline-block">
             <FaRegCalendarAlt className={"mr-2 -mt-1 inline-block"} />
             {dateFormat(date)}
