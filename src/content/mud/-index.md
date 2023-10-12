@@ -2,8 +2,19 @@
 title: MUD
 meta_title: MUD
 description: MUD
-image: /images/avatar.png
 draft: false
----
 
-This is where mud is discussed.
+banner:
+  header: MUD
+  image: /assets/mud/mud1.png
+
+about:
+  - header: What's Included
+    image: /assets/mud/mud3.png
+    content: This template is
+
+kickstarter:
+  - header: Discover the Key Features Of Astro
+    link: https://www.kickstarter.com/projects/mudgraphicnovel/mud-0/widget/card.html?v=2
+    content: "blah blah blah"
+---

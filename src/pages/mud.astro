@@ -4,33 +4,76 @@ import { markdownify } from "@/lib/utils/textConverter";
 import { Image } from "@astrojs/image/components";
 import { getEntryBySlug } from "astro:content";
 
+interface Mud {
+  title: string;
+  description: string;
+  meta_title: string;
+  banner: {
+    header: string;
+    image: string;
+  };
+  about: {
+    header: string;
+    image: string;
+    content: string;
+  };
+  kickstarter: {
+    header: string;
+    link: string;
+    content: string;
+  };
+}
+
 const mud = await getEntryBySlug("mud", "-index");
 const { Content } = await mud.render();
-const { title, description, meta_title, image } = mud.data;
+// const { title, description, meta_title, image } = mud.data;
+const { title, description, meta_title, banner, about, kickstarter }: Mud = mud.data;
 ---
 
 <Base
   title={title}
   meta_title={meta_title}
   description={description}
-  image={image}
 >
   <section class="section-sm">
     <div class="container">
+      {
+        banner.image && (
+          <div class="mb-10">
+            <Image
+              src={banner.image}
+              height={500}
+              width={1200}
+              alt={title}
+              class="w-full rounded-lg "
+              format="webp"
+            />
+          </div>
+        )
+      }
+
+      <div class="row items-center justify-between">
+        {
+          about.image && (
+            <Image
+              class="mx-auto mb-6 rounded-lg w-64"
+              src={about.image}
+              width={512}
+              height={512}
+              alt={title}
+              format="webp"
+              fit="contain"
+            />
+          )
+        }
+        <div>
+          <h2 set:html={about.header} class="mb-4" />
+          <p set:html={about.content} class="mb-8 text-lg" />
+        </div>
+      </div>
+
       <div class="row justify-center">
         <div class="text-center md:col-10 lg:col-7">
-          {
-            image && (
-              <Image
-                class="mx-auto mb-6 rounded-lg  w-64"
-                src={image}
-                width={1024}
-                height={1024}
-                alt={title}
-                format="webp"
-              />
-            )
-          }
           <h2 set:html={markdownify(title)} class="h3 mb-6" />
           <div class="content">
             <Content />
