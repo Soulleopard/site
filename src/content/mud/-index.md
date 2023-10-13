@@ -9,12 +9,12 @@ banner:
   image: /assets/mud/mud1.png
 
 about:
-  - header: What's Included
-    image: /assets/mud/mud3.png
-    content: This template is
+  header: About header
+  image: /assets/mud/mud3.png
+  content: about content
 
 kickstarter:
-  - header: Discover the Key Features Of Astro
-    link: https://www.kickstarter.com/projects/mudgraphicnovel/mud-0/widget/card.html?v=2
-    content: "blah blah blah"
+  header: Support MUD on Kickstarter!
+  link: https://www.kickstarter.com/projects/mudgraphicnovel/mud-0/widget/card.html?v=2
+  content: "blah blah blah"
 ---

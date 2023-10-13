@@ -37,8 +37,9 @@ const { title, description, meta_title, banner, about, kickstarter }: Mud = mud.
 >
   <section class="section-sm">
     <div class="container">
-      {
-        banner.image && (
+      <!-- Banner -->
+      <div class="relative">
+        {
           <div class="mb-10">
             <Image
               src={banner.image}
@@ -48,39 +49,48 @@ const { title, description, meta_title, banner, about, kickstarter }: Mud = mud.
               class="w-full rounded-lg "
               format="webp"
             />
+            <div class="absolute inset-0 flex justify-center items-end">
+              <h1 class="font-normal text-white opacity-80 md:text-8xl sm:text-5xl">
+                {title}
+              </h1>
+            </div>
           </div>
-        )
-      }
-
-      <div class="row items-center justify-between">
-        {
-          about.image && (
-            <Image
-              class="mx-auto mb-6 rounded-lg w-64"
-              src={about.image}
-              width={512}
-              height={512}
-              alt={title}
-              format="webp"
-              fit="contain"
-            />
-          )
         }
-        <div>
+      </div>
+
+      <!-- About -->
+      <div class="row justify-center items-end mb-16">
+        <div class="md:col-3">
+          {
+            about.image && (
+              <Image
+                class="mx-auto w-64"
+                src={about.image}
+                width={680}
+                height={1039}
+                alt={title}
+                format="webp"
+              />
+            )
+          }
+        </div>
+        <div class="md:col-9 mb-10">
           <h2 set:html={about.header} class="mb-4" />
           <p set:html={about.content} class="mb-8 text-lg" />
         </div>
       </div>
 
-      <div class="row justify-center">
-        <div class="text-center md:col-10 lg:col-7">
-          <h2 set:html={markdownify(title)} class="h3 mb-6" />
-          <div class="content">
-            <Content />
-            <iframe src="https://www.kickstarter.com/projects/mudgraphicnovel/mud-0/widget/card.html?v=2" width="220" height="420" frameborder="0" scrolling="no"></iframe>
-          </div>
+      <!-- Kickstarter -->
+      <div class="row justify-center items-start mb-10">
+        <div class="md:col-9 mb-10">
+          <h2 set:html={kickstarter.header} class="mb-4" />
+          <p set:html={kickstarter.content} class="mb-8 text-lg" />
+        </div>
+        <div class="md:col-3 flex justify-center">
+          <iframe src={kickstarter.link} width="220" height="420"/>
         </div>
       </div>
+
     </div>
   </section>
 </Base>
