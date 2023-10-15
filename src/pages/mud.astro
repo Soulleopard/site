@@ -25,8 +25,6 @@ interface Mud {
 }
 
 const mud = await getEntryBySlug("mud", "-index");
-const { Content } = await mud.render();
-// const { title, description, meta_title, image } = mud.data;
 const { title, description, meta_title, banner, about, kickstarter }: Mud = mud.data;
 ---
 
