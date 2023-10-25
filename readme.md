@@ -8,7 +8,7 @@ Tristan Brunfelt's personal website.
 
 Clone: `git clone https://github.com/Soulleopard/site.git`
 
-Use Node 18: `nvm install 18`
+Use Node 20: `nvm install 20`
 
 Install Node Modules: `npm install`
 

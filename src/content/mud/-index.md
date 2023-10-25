@@ -6,11 +6,9 @@ draft: false
 
 banner:
   header: MUD
-  image: /assets/mud/mud1.png
 
 about:
   header: About header
-  image: /assets/mud/mud3.png
   content: about content
 
 kickstarter:
