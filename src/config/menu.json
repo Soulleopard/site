@@ -5,27 +5,16 @@
       "url": "/"
     },
     {
-      "name": "About",
-      "url": "/about"
+      "name": "Writing",
+      "url": "/writing"
     },
     {
       "name": "MUD",
       "url": "/mud"
     },
     {
-      "name": "Pages",
-      "url": "",
-      "hasChildren": true,
-      "children": [
-        {
-          "name": "Blog",
-          "url": "/blog"
-        },
-        {
-          "name": "Search",
-          "url": "/search"
-        }
-      ]
+      "name": "Nanowrimo",
+      "url": "/nanowrimo"
     }
   ]
 }
