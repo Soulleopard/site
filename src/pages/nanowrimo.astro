@@ -1,0 +1,27 @@
+---
+import Base from "@/layouts/Base.astro";
+import PageHeader from "@/components/PageHeader.astro";
+import { getEntryBySlug } from "astro:content";
+
+const nanowrimo = await getEntryBySlug("nanowrimo", "-index");
+const { Content } = await nanowrimo.render();
+const { title, meta_title } = nanowrimo.data;
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+>
+  <PageHeader title={title} />
+  <section class="section-sm">
+    <div class="container"> 
+      <div class="row justify-center">
+        <div class="col-10">
+          <div class="content">
+            <Content />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

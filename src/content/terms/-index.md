@@ -12,7 +12,7 @@ draft: false
 
 ### Source Code
 
-The source code for janedoe.com is protected under the MIT License. In short, you can do as you see fit, so long as you include the original copyright notice in any copy of the software.
+The source code for tristanross.net is protected under the MIT License. In short, you can do as you see fit, so long as you include the original copyright notice in any copy of the software.
 
 ```md
 The MIT License (MIT)
