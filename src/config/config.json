@@ -11,7 +11,6 @@
     "sticky_header": false,
     "theme_switcher": true,
     "default_theme": "system",
-    "pagination": 4,
     "summary_length": 200,
     "writing_folder": "writing"
   },

@@ -7,7 +7,7 @@ import tristan from "@assets/index/tristan.png";
 
 const index = await getEntryBySlug("index", "-index");
 const { Content } = await index.render();
-const { title, description, meta_title, image } = index.data;
+const { title, description, meta_title } = index.data;
 ---
 
 <Base
